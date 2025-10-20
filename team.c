@@ -104,7 +104,7 @@ int main() {
 
 		printf("\nDay %d \n", day);
 		printf("오늘 입고된 물건 개수 입력 (종료: -1): ");
-		scanf("%d", &item_cnt);
+		scanf_s("%d", &item_cnt);
 
 		// 종료 조건 정의
 		if (item_cnt == -1) break; // -1 입력 시 종료
@@ -125,7 +125,7 @@ int main() {
 
 		// (2) 판매 처리
 		printf("오늘 판매된 물건 개수 입력: ");
-		scanf("%d", &sold_cnt);
+		scanf_s("%d", &sold_cnt);
 		for (int i = 0; i < sold_cnt; i++) {
 			if (!is_empty(&display)) dequeue(&display);  // 판매 = 가장 오래된 상품 제거
 			else {
